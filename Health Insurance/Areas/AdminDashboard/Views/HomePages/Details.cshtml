@@ -1,0 +1,149 @@
+﻿@model Health_Insurance.Models.HomePage
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br />
+<br />
+<h1>Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BgImageOne)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Url.Content("~/Images/"+Model.BgImageOne)" height="250px" width="250px" style="border-radius:30%">
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BgImageTwo)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Url.Content("~/Images/"+Model.BgImageTwo)" height="250px" width="250px" style="border-radius:30%">
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BgImageThree)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Url.Content("~/Images/"+Model.BgImageThree)" height="250px" width="250px" style="border-radius:30%">
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BgImageFour)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Url.Content("~/Images/"+Model.BgImageFour)" height="250px" width="250px" style="border-radius:30%">
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BgImageFive)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Url.Content("~/Images/"+Model.BgImageFive)" height="250px" width="250px" style="border-radius:30%">
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TitleCardOne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TitleCardOne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TextCardOne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TextCardOne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TitleCardThree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TitleCardThree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TextCardThree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TextCardThree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntroTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntroTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IntroText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IntroText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PointOneTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PointOneTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PointOneText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PointOneText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PointTwoTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PointTwoTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PointTwoText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PointTwoText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PointThreeTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PointThreeTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PointThreeText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PointThreeText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TitleEmer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TitleEmer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TextEmer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TextEmer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TitleSubs)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TitleSubs)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TextSubs)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TextSubs)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Feedback)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Feedback)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-info" asp-action="Index">Back to List</a>
+</div>

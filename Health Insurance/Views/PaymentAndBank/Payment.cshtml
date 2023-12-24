@@ -1,0 +1,70 @@
+﻿@model Health_Insurance.Models.SahtakPayment
+@{
+    ViewData["Title"] = "Payment";
+}
+<!-- Single News -->
+<section class="news-single section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="comments-form">
+							<h2>@ViewData["FirstName"]'s Bank Account Information</h2>
+							<!-- Contact Form -->
+							<form class="form"asp-controller="PaymentAndBank" asp-action="Payment" asp-route-id="@ViewData["SubscriptionID"]">
+								<div asp-validation-summary="All" class="text-danger"></div>
+								<div class="row">
+									<div class="col-lg-6 col-md-4 col-12">
+										<div class="form-group">
+											<i class="fa fa-user"></i>
+											<input type="text" asp-for="CardNameholder" placeholder="Credit Card Holder Name" required="required">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-4 col-12">
+										<div class="form-group">
+											<i class="fa fa-credit-card"></i>
+											<input type="number" asp-for="CardNumber" minlength="16" maxlength="16" placeholder="Your Card Number" required="required">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-4 col-12">
+										<div class="form-group">
+											<i class="fa fa-user"></i>
+											<input type="text" name="AccountName" id="AccountName" placeholder="Your Bank Account Name" required="required">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-4 col-12">
+										<div class="form-group">
+											<i class="fa fa-money"></i>
+											<input type="number" name="Amount" id="Amount"asp-for="Amount" placeholder="Your Bank Amount" required="required">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-4 col-12">
+										<div class="form-group">
+											<i class="fa fa-lock"></i>
+											<input type="password" name="Password" id="Password" minlength="4" maxlength="4" placeholder="Your Bank Password" required="required" >
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-4 col-12"hidden>
+										<div class="form-group">
+											<i class="fa fa-lock"></i>
+											<input type="number" value="@ViewData["SubscriptionID"]" id="Password" asp-for="SubscriptionId">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group button">
+											<button type="submit" class="btn btn-outline-primary"><i class="fa fa-check fa-beat"></i>Pay</button>
+										</div>
+									</div>
+								</div>
+								<p style="color:red">@ViewData["ErrorSubs"]</p>
+								<p style="color:red">@ViewData["ErrorPayment"]</p>
+							</form>
+							<!--/ End Contact Form -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

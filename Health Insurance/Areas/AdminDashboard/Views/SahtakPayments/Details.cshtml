@@ -1,0 +1,61 @@
+﻿@model Health_Insurance.Models.SahtakPayment
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br />
+<br />
+<h1>Details</h1>
+
+<div>
+    <h4>SahtakPayment</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Card Name Holder
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CardNameholder)
+        </dd>
+        <dt class = "col-sm-2">
+            Card Number
+        </dt>
+        <dd class = "col-sm-10">
+            Card Number
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt class = "col-sm-2">
+            Payment Date
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PaymentDate)
+        </dd>
+        <dt class = "col-sm-2">
+            Bank Account
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bank.AccountName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Subscription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Subscription.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.User.FirstName+" "+model.User.LastName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,60 @@
+﻿@model Health_Insurance.Models.SahtakUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Account Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINEARICONS -->
+    <link rel="stylesheet" href="~/Account Template/fonts/linearicons/style.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="~/Account Template/css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="inner">
+            <form action="">
+                <div class="form-holder">
+                    <span class="lnr lnr-user"></span>
+                    <input type="text" class="form-control" asp-for="FirstName" disabled>
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-user"></span>
+                    <input type="text" class="form-control" asp-for="LastName" disabled>
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-phone-handset"></span>
+                    <input type="email" class="form-control" asp-for="PhoneNumber" disabled>
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-envelope"></span>
+                    <input type="text" class="form-control" asp-for="Email" disabled>
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-home"></span>
+                    <input type="text" class="form-control" asp-for="Address" disabled>
+                </div>
+                <button asp-controller="Home" asp-action="Index">
+                    <span>Back to Home Page</span>
+                </button>
+                <button asp-controller="SignedInAccount" asp-action="Edit" asp-route-id="@ViewData["UserId"]">
+                    <span>Edit</span>
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="~/Account Template/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Account Template/js/main.js"></script>
+</body>
+</html>

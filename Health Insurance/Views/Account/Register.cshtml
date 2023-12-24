@@ -1,0 +1,73 @@
+﻿@model Health_Insurance.Models.SahtakUser
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sahtak | Register</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- LINEARICONS -->
+	<link rel="stylesheet" href="~/Account Template/fonts/linearicons/style.css">
+
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="~/Account Template/css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="inner">
+			<img src="~/Images/medicine.png" alt="" class="image-1">
+			<form asp-action="Register">
+                <div asp-validation-summary="All" class="text-danger"></div>
+				<br />
+				<br />
+				<h3>Register</h3>
+				<div class="form-holder">
+					<span class="lnr lnr-user"></span>
+                    <input type="text" class="form-control" asp-for="FirstName" placeholder="First Name"required>
+				</div>
+                <div class="form-holder">
+                    <span class="lnr lnr-user"></span>
+                    <input type="text" class="form-control" asp-for="LastName" placeholder="Last Name"required>
+                </div>
+				<div class="form-holder">
+					<span class="lnr lnr-phone-handset"></span>
+					<input type="text" class="form-control"asp-for="PhoneNumber" placeholder="Phone Number"required>
+				</div>
+				<div class="form-holder">
+					<span class="lnr lnr-envelope"></span>
+                    <input type="Email" class="form-control" asp-for="Email" placeholder="Email"required>
+				</div>
+				<div class="form-holder">
+					<span class="lnr lnr-home"></span>
+					<input type="text" class="form-control" asp-for="Address" placeholder="Address"required>
+				</div>
+				<div class="form-holder">
+					<span class="lnr lnr-lock"></span>
+					<input type="password" class="form-control"asp-for="Password" placeholder="Password"required>
+				</div>
+				<div class="form-holder">
+					<span class="lnr lnr-lock"></span>
+					<input type="password" class="form-control" name="ConfirmPassword" id="ConfirmPassword" placeholder="Confirm Password"required>
+				</div>
+				<button type="submit">
+					<span>Register</span>
+				</button>
+				<br />
+				<br />
+				<a style="text-decoration:none; color:black;font-size:large" asp-controller="Account" asp-action="SignIn">Have Account ?</a>
+				<p style="color:red">@ViewData["InvalidEmail"]</p>
+				<p style="color:red">@ViewData["ConfrimPasswordWrong"]</p>
+			</form>
+		</div>
+
+	</div>
+
+	<script src="~/Account Template/js/jquery-3.3.1.min.js"></script>
+	<script src="~/Account Template/js/main.js"></script>
+</body>
+</html>

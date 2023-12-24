@@ -1,0 +1,124 @@
+﻿@model Tuple<ContactUsPage,SahtakContactU>
+@{
+    ViewData["Title"] = "ContactUs";
+}
+<link rel="stylesheet"href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay">
+	<div class="container">
+		<div class="bread-inner">
+			<div class="row">
+				<div class="col-12">
+					<h2>@Model.Item1.Title</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Breadcrumbs -->
+<!-- Start Contact Us -->
+<section class="contact-us section">
+	<div class="container">
+		<div class="inner">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="contact-us-left" style="height: 600px; width: 500px;">
+						<!-- Start Google-map -->
+						<div id="map" class="col-md wow fadeInUp" data-wow-delay="0.1s" style="height: 600px; width: 500px;"></div>
+						<!-- /End Google-map -->
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="contact-us-form">
+						<h2>@Model.Item1.Header</h2>
+						<p>@Model.Item1.Paragraph</p>
+						<!-- Form -->
+						<form class="form" method="post" asp-action="ContactUs">
+							<div asp-validation-summary="All" class="text-danger"></div>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<input type="text" asp-for="Item2.Name" name="Name" placeholder="Your Name"required>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<input type="email" asp-for="Item2.Email" name="Email" placeholder="Email"required>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<input type="text" asp-for="Item2.PhoneNumber" name="PhoneNumber" placeholder="PhoneNumber"required>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<input type="text" asp-for="Item2.Subject" name="Subject" placeholder="Subject">
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="form-group">
+										<textarea name="Description"asp-for="Item2.Description" placeholder="Your Message"required></textarea>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group login-btn">
+										<button class="btn" type="submit">Send</button>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!--/ End Form -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contact-info">
+			<div class="row">
+				<!-- single-info -->
+				<div class="col-lg-4 col-12 ">
+					<div class="single-info">
+						<i class="icofont icofont-ui-call"></i>
+						<div class="content">
+							<h3>@Model.Item1.PhoneNumber</h3>
+						</div>
+					</div>
+				</div>
+				<!--/End single-info -->
+				<!-- single-info -->
+				<div class="col-lg-4 col-12 ">
+					<div class="single-info">
+						<i class="icofont-google-map"></i>
+						<div class="content">
+							<h3>@Model.Item1.Location</h3>
+							<p>@Model.Item1.LocationDesc</p>
+						</div>
+					</div>
+				</div>
+				<!--/End single-info -->
+				<!-- single-info -->
+				<div class="col-lg-4 col-12 ">
+					<div class="single-info">
+						<i class="icofont icofont-wall-clock"></i>
+						<div class="content">
+							<h3>@Model.Item1.WorkingDays</h3>
+							<p>@Model.Item1.WorkingDaysDesc</p>
+						</div>
+					</div>
+				</div>
+				<!--/End single-info -->
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Contact Us -->
+<script>
+	var map = L.map('map').setView([31.9505, 35.9232], 13); // Amman's coordinates
+
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+		// Add markers, popups, or other map features here
+</script>

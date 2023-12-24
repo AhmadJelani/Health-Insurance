@@ -1,0 +1,309 @@
+﻿@model Tuple<IEnumerable<SahtakSubscription>, IEnumerable<FeedbackJooinTable>,HomePage>
+@{
+    ViewData["Title"] = "Home Page";
+}	
+<!-- Preloader -->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+
+        <div class="indicator"> 
+            <svg width="16px" height="12px">
+                <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+            </svg>
+        </div>
+    </div>
+</div>
+<!-- End Preloader -->	
+<!-- Slider Area -->
+<section class="slider">
+	<div class="hero-slider">
+				
+		<!-- Start Single Slider -->
+	<div class="single-slider" style="background-image:url('/Images/@Model.Item3.BgImageOne');">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="text">
+							<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
+							<p>Our unwavering commitment to your health and well-being is the cornerstone of our trusted medical services. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Start End Slider -->
+				
+		<!-- Start Single Slider -->
+		<div class="single-slider" style="background-image:url('/Images/@Model.Item3.BgImageTwo');">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="text">
+							<h1>When it comes to your health, <span>trust is paramount,</span> and we have earned the <span>confidence </span>of countless patients.</h1>
+							<p>Our unwavering commitment to your well-being is reflected in the trust we've built with our patients over the years, making us the preferred choice for reliable healthcare services. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Single Slider -->
+		<!-- Start Single Slider -->
+		<div class="single-slider" style="background-image:url('/Images/@Model.Item3.BgImageThree');">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="text">
+							<h1>Your health is too <span>important</span>  to leave to chance. That's why our <span>trusted medical </span>services are here for you.</h1>
+							<p>Discover peace of mind with our reliable healthcare solutions, tailored to safeguard your well-being at every step of your health journey. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Single Slider -->
+		<!-- Start Single Slider -->
+		<div class="single-slider" style="background-image:url('/Images/@Model.Item3.BgImageFour');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="text">
+							<h1>Our commitment to your well-being is <span>unwavering,</span> making us a trusted choice for <span>healthcare services.</span></h1>
+							<p>We believe that your health is your most valuable asset. Our unwavering commitment to your
+								well-being drives us to consistently deliver top-quality healthcare services, making us the
+								trusted partner you can rely on for a healthier and happier life. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- End Single Slider -->
+		<!-- Start Single Slider -->
+		<div class="single-slider" style="background-image:url('/Images/@Model.Item3.BgImageFive');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="text">
+							<h1>With a focus on <span>integrity and patient satisfaction,</span>  our medical services are built on a <span>foundation of trust.</span></h1>
+						<p>Our commitment to transparency, ethical care, and your well-being ensures that you receive the
+						most reliable and trusted medical services available </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- Start End Slider -->
+		</div>
+</section>
+<!--/ End Slider Area -->
+		
+<!-- Start Schedule Area -->
+<section class="schedule">
+	<div class="container">
+		<div class="schedule-inner">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-12 ">
+					<!-- single-schedule -->
+					<div class="single-schedule first">
+						<div class="inner">
+							<div class="icon">
+								<i class="fa fa-ambulance"></i>
+							</div>
+							<div class="single-content">
+								<h4>@Model.Item3.TitleCardOne</h4>
+								<p>@Model.Item3.TextCardOne</p>
+								<a href="#MoveHere">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-12">
+				<!-- single-schedule -->
+				<div class="single-schedule last">
+					<div class="inner">
+						<div class="icon">
+							<i class="icofont-ui-clock"></i>
+						</div>
+						<div class="single-content">
+							<h4>Opening Hours</h4>
+							<ul class="time-sidual">
+								<li class="day">Saturday - Tuesday <span>8.00-17.00</span></li>
+								<li class="day"> Wednsday<span>8.00-16.30</span></li>
+								<li class="day">Thusday <span>8.00-15.00</span></li>
+							</ul>
+							<a asp-action="ContactUs">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<!-- single-schedule -->
+					<div class="single-schedule middle">
+						<div class="inner">
+							<div class="icon">
+								<i class="icofont-prescription"></i>
+							</div>
+							<div class="single-content">
+								<h4>@Model.Item3.TitleCardThree</h4>
+								<p>@Model.Item3.TextCardThree</p>
+								<a asp-controller="SahtakBeneficiaries" asp-action="Index">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+						
+			</div>
+		</div>
+	</div>
+</section>
+<!--/End Start schedule Area -->
+
+<!-- Start Feautes -->
+<section class="Feautes section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<h2>@Model.Item3.IntroTitle</h2>
+					<img src="~/Website Template/img/section-img.png" alt="#">
+					<p>@Model.Item3.IntroText</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-12">
+				<!-- Start Single features -->
+				<div class="single-features">
+					<div class="signle-icon">
+						<i class="icofont icofont-ambulance-cross"></i>
+					</div>
+					<h3>@Model.Item3.PointOneTitle</h3>
+					<p>@Model.Item3.PointOneText</p>
+				</div>
+				<!-- End Single features -->
+			</div>
+			<div class="col-lg-4 col-12">
+				<!-- Start Single features -->
+				<div class="single-features">
+					<div class="signle-icon">
+						<i class="icofont icofont-medical-sign-alt"></i>
+					</div>
+					<h3>@Model.Item3.PointTwoTitle</h3>
+					<p>@Model.Item3.@Model.Item3.PointTwoText</p>
+				</div>
+				<!-- End Single features -->
+			</div>
+			<div class="col-lg-4 col-12">
+				<!-- Start Single features -->
+				<div class="single-features last">
+					<div class="signle-icon">
+						<i class="icofont icofont-stethoscope"></i>
+					</div>
+					<h3>@Model.Item3.PointThreeTitle</h3>
+					<p>@Model.Item3.PointThreeText</p>
+				</div>
+				<!-- End Single features -->
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Feautes -->
+		
+<!-- Start Call to action -->
+<section class="call-action overlay" data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-12">
+				<div class="content">
+					<h2>@Model.Item3.TitleEmer</h2>
+					<p>@Model.Item3.TextEmer</p>
+					<div class="button">
+					<a href="tel:06123456789" class="btn">Contact Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Call to action -->
+<br />
+<br />
+<!-- Pricing Table -->
+<section id="MoveHere" class="pricing-table section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<h2>@Model.Item3.TitleSubs</h2>
+					<img src="~/Website Template/img/section-img.png" alt="#">
+					<p>@Model.Item3.TextSubs</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			@foreach (var item in Model.Item1)
+			{
+				<!-- Single Table -->
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="single-table">
+						<!-- Table Head -->
+						<div class="table-head">
+							<div class="icon">
+								<i class="icofont-heart-beat"></i>
+							</div>
+							<h4 class="title">@item.Name</h4>
+							<div class="price">
+								<p class="amount">JD @item.Price<span>/ Per @item.Period Month</span></p>
+							</div>
+						</div>
+						<!-- Table List -->
+						<ul class="table-list">
+							<li>@item.Description</li>
+						</ul>
+						<div class="table-bottom">
+							<a class="btn" asp-controller="PaymentAndBank" asp-action="Payment"asp-route-id="@item.Id">Subscribe Now</a>
+						</div>
+						<!-- Table Bottom -->
+					</div>
+				</div>
+				<!-- End Single Table-->
+			}
+		</div>
+	</div>	
+	<a class="container btn" style="width:200px;display:flex;justify-content:center;color:white"asp-area=""asp-controller="SahtakSubscriptions"asp-action="Index">More</a>
+</section>	
+<!--/ End Pricing Table -->
+<br />
+<br />
+<br />
+<!-- Start Testimonials -->
+<section class="section testimonials overlay" data-stellar-background-ratio="0.5">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="section-title">
+					<h2>@Model.Item3.Feedback</h2>
+				<img src="~/Website Template/img/section-img2.png" alt="#">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-12">
+			<div class="owl-carousel testimonial-slider">
+					@foreach (var item in Model.Item2)
+					{
+						<!-- Start Single Testimonial -->
+						<div class="single-testimonial">
+							<p>@item.feedback.Text</p>
+							<h4 class="name">@(item.user.FirstName + " " + @item.user.LastName)</h4>
+						</div>
+						<!-- End Single Testimonial -->
+					}
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!--/ End Testimonials -->

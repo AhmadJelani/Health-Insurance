@@ -1,0 +1,134 @@
+﻿@model Health_Insurance.Models.HomePage
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<br />
+<br />
+<h1>Edit</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit"enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Bg_ImageOne" class="control-label"></label>
+                <input asp-for="Bg_ImageOne" type="file" class="form-control" />
+                <span asp-validation-for="Bg_ImageOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bg_ImageTwo" class="control-label"></label>
+                <input asp-for="Bg_ImageTwo"type="file" class="form-control" />
+                <span asp-validation-for="Bg_ImageTwo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bg_ImageThree" class="control-label"></label>
+                <input asp-for="Bg_ImageThree"type="file" class="form-control" />
+                <span asp-validation-for="Bg_ImageThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bg_ImageFour" class="control-label"></label>
+                <input asp-for="Bg_ImageFour"type="file" class="form-control" />
+                <span asp-validation-for="Bg_ImageFour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bg_ImageFive" class="control-label"></label>
+                <input asp-for="Bg_ImageFive"type="file" class="form-control" />
+                <span asp-validation-for="Bg_ImageFive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitleCardOne" class="control-label"></label>
+                <input asp-for="TitleCardOne" class="form-control" />
+                <span asp-validation-for="TitleCardOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TextCardOne" class="control-label"></label>
+                <input asp-for="TextCardOne" class="form-control" />
+                <span asp-validation-for="TextCardOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitleCardThree" class="control-label"></label>
+                <input asp-for="TitleCardThree" class="form-control" />
+                <span asp-validation-for="TitleCardThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TextCardThree" class="control-label"></label>
+                <input asp-for="TextCardThree" class="form-control" />
+                <span asp-validation-for="TextCardThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IntroTitle" class="control-label"></label>
+                <input asp-for="IntroTitle" class="form-control" />
+                <span asp-validation-for="IntroTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IntroText" class="control-label"></label>
+                <textarea asp-for="IntroText" class="form-control"rows="10"></textarea>
+                <span asp-validation-for="IntroText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointOneTitle" class="control-label"></label>
+                <input asp-for="PointOneTitle" class="form-control" />
+                <span asp-validation-for="PointOneTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointOneText" class="control-label"></label>
+                <input asp-for="PointOneText" class="form-control" />
+                <span asp-validation-for="PointOneText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointTwoTitle" class="control-label"></label>
+                <input asp-for="PointTwoTitle" class="form-control" />
+                <span asp-validation-for="PointTwoTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointTwoText" class="control-label"></label>
+                <input asp-for="PointTwoText" class="form-control" />
+                <span asp-validation-for="PointTwoText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointThreeTitle" class="control-label"></label>
+                <input asp-for="PointThreeTitle" class="form-control" />
+                <span asp-validation-for="PointThreeTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointThreeText" class="control-label"></label>
+                <input asp-for="PointThreeText" class="form-control" />
+                <span asp-validation-for="PointThreeText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitleEmer" class="control-label"></label>
+                <input asp-for="TitleEmer" class="form-control" />
+                <span asp-validation-for="TitleEmer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TextEmer" class="control-label"></label>
+                <textarea asp-for="TextEmer" class="form-control"rows="10"></textarea>
+                <span asp-validation-for="TextEmer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitleSubs" class="control-label"></label>
+                <input asp-for="TitleSubs" class="form-control" />
+                <span asp-validation-for="TitleSubs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TextSubs" class="control-label"></label>
+                <textarea asp-for="TextSubs" class="form-control"rows="10"></textarea>
+                <span asp-validation-for="TextSubs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Feedback" class="control-label"></label>
+                <input asp-for="Feedback" class="form-control" />
+                <span asp-validation-for="Feedback" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-outline-info" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a class="btn btn-outline-info" asp-action="Index">Back to List</a>
+</div>
+

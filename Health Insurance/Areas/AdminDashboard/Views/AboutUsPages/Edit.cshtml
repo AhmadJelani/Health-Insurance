@@ -1,0 +1,156 @@
+﻿@model Health_Insurance.Models.AboutUsPage
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>AboutUsPage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="FirstTitle" class="control-label"></label>
+                <input asp-for="FirstTitle" class="form-control" />
+                <span asp-validation-for="FirstTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstParagraph" class="control-label"></label>
+                <input asp-for="FirstParagraph" class="form-control" />
+                <span asp-validation-for="FirstParagraph" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label"></label>
+                <input asp-for="ImagePath" class="form-control" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondTitle" class="control-label"></label>
+                <input asp-for="SecondTitle" class="form-control" />
+                <span asp-validation-for="SecondTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondParagraph" class="control-label"></label>
+                <input asp-for="SecondParagraph" class="form-control" />
+                <span asp-validation-for="SecondParagraph" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SixPointParagraph" class="control-label"></label>
+                <input asp-for="SixPointParagraph" class="form-control" />
+                <span asp-validation-for="SixPointParagraph" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointOne" class="control-label"></label>
+                <input asp-for="PointOne" class="form-control" />
+                <span asp-validation-for="PointOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointTwo" class="control-label"></label>
+                <input asp-for="PointTwo" class="form-control" />
+                <span asp-validation-for="PointTwo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointThree" class="control-label"></label>
+                <input asp-for="PointThree" class="form-control" />
+                <span asp-validation-for="PointThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointFour" class="control-label"></label>
+                <input asp-for="PointFour" class="form-control" />
+                <span asp-validation-for="PointFour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointFive" class="control-label"></label>
+                <input asp-for="PointFive" class="form-control" />
+                <span asp-validation-for="PointFive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointSix" class="control-label"></label>
+                <input asp-for="PointSix" class="form-control" />
+                <span asp-validation-for="PointSix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThirdTitle" class="control-label"></label>
+                <input asp-for="ThirdTitle" class="form-control" />
+                <span asp-validation-for="ThirdTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThirdParagraph" class="control-label"></label>
+                <input asp-for="ThirdParagraph" class="form-control" />
+                <span asp-validation-for="ThirdParagraph" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointOneE" class="control-label"></label>
+                <input asp-for="PointOneE" class="form-control" />
+                <span asp-validation-for="PointOneE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointOneEText" class="control-label"></label>
+                <input asp-for="PointOneEText" class="form-control" />
+                <span asp-validation-for="PointOneEText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointTwoE" class="control-label"></label>
+                <input asp-for="PointTwoE" class="form-control" />
+                <span asp-validation-for="PointTwoE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointTwoEText" class="control-label"></label>
+                <input asp-for="PointTwoEText" class="form-control" />
+                <span asp-validation-for="PointTwoEText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointThreeE" class="control-label"></label>
+                <input asp-for="PointThreeE" class="form-control" />
+                <span asp-validation-for="PointThreeE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointThreeEText" class="control-label"></label>
+                <input asp-for="PointThreeEText" class="form-control" />
+                <span asp-validation-for="PointThreeEText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointFourE" class="control-label"></label>
+                <input asp-for="PointFourE" class="form-control" />
+                <span asp-validation-for="PointFourE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointFiveEText" class="control-label"></label>
+                <input asp-for="PointFiveEText" class="form-control" />
+                <span asp-validation-for="PointFiveEText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointSixE" class="control-label"></label>
+                <input asp-for="PointSixE" class="form-control" />
+                <span asp-validation-for="PointSixE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointSixEText" class="control-label"></label>
+                <input asp-for="PointSixEText" class="form-control" />
+                <span asp-validation-for="PointSixEText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointFourEText" class="control-label"></label>
+                <input asp-for="PointFourEText" class="form-control" />
+                <span asp-validation-for="PointFourEText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PointFiveE" class="control-label"></label>
+                <input asp-for="PointFiveE" class="form-control" />
+                <span asp-validation-for="PointFiveE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

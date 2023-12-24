@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Health_Insurance.Models.ContactUsPage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<br />
+<h1>Contact Us Page</h1>
+<div class="container-fluid pt-4 px-4">
+<div class="bg-light text-center rounded p-4">
+<div class="table-responsive">
+<table class="table text-start align-middle table-bordered table-hover mb-0">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Header)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paragraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingDays)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingDaysDesc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Header)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paragraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingDays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingDaysDesc)
+            </td>
+            <td>
+                <a class="btn btn-outline-info"asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a class="btn btn-outline-info"asp-action="Details" asp-route-id="@item.Id">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</div>
+</div>

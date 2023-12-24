@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Health_Insurance.Models.SahtakBeneficiary>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<br />
+@if (Model.Any())
+{
+    <h1>Your Beneficiaries</h1>
+    <br />
+    <br />
+    <p>
+        <a style="color:white" class="btn btn-primary" asp-action="Create">Add Beneficiary</a>
+    </p>
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Relationship)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProofOfRelationship)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subscription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Relationship)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProofOfRelationship)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subscription.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.Id)
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <div class="container">
+        <h3>
+            You Don't Have Any Beneficiary
+        </h3>
+        <br>
+        <p>
+            <a style="color:white" class="btn btn-primary" asp-action="Create">Add Beneficiary</a>
+        </p>
+    </div>
+
+}

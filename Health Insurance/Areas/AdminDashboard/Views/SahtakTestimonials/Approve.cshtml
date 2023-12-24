@@ -1,0 +1,49 @@
+﻿@model Health_Insurance.Models.SahtakTestimonial
+
+@{
+    ViewData["Title"] = "Approve";
+}
+<br />
+<br />
+<h1>Approve</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Approve">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group"hidden>
+                <label asp-for="Text" class="control-label"></label>
+                <textarea asp-for="Text" class="form-control">@Model.Text</textarea>
+                <span asp-validation-for="Text" class="text-danger"></span>
+            </div>
+            <div class="form-group"hidden>
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group"hidden>
+                <label asp-for="SubmitDate" class="control-label"></label>
+                <input asp-for="SubmitDate" class="form-control"/>
+                <span asp-validation-for="SubmitDate" class="text-danger"></span>
+            </div>
+            <div class="form-group"hidden>
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <h3>
+                    Do You Want To Approve This Feedback?
+                </h3>
+                <input type="submit" value="Approve" class="btn btn-outline-primary" />
+            </div>
+            <br />
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-outline-primary" asp-action="Index">Back to List</a>
+</div>
+

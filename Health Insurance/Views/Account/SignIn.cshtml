@@ -1,0 +1,45 @@
+﻿@model Health_Insurance.Models.SahtakUser
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sahtak | Sign In</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- LINEARICONS -->
+	<link rel="stylesheet" href="~/Account Template/fonts/linearicons/style.css">
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="~/Account Template/css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="inner">
+			<img src="~/Images/doctor.png" alt="" class="image-1">
+			<form asp-action="SignIn" method="post">
+				<h3>Sign In</h3>
+				<div class="form-holder">
+					<span class="lnr lnr-envelope"></span>
+					<input type="email" class="form-control" asp-for="Email" name="Email" id="Email" placeholder="Mail"required>
+				</div>
+				<div class="form-holder">
+					<span class="lnr lnr-lock"></span>
+					<input type="password" class="form-control"asp-for="Password" placeholder="Password"required>
+				</div>
+				<button type="submit">
+					<span>Sign In</span>
+				</button>
+				<br />
+				<br />
+				<p><a style="text-decoration:none; color:black;font-size:large" href="/Account/Register" class="text">Create Account ?</a></p>
+				<p style="color:red">@ViewData["ErrorSignIn"]</p>
+			</form>
+			<img src="~/Images/stethoscope.png" alt="" class="image-2">
+		</div>
+	</div>
+	<script src="~/Account Template/js/jquery-3.3.1.min.js"></script>
+	<script src="~/Account Template/js/main.js"></script>
+</body>
+</html>

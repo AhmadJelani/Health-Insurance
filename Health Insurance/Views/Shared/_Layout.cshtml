@@ -1,0 +1,289 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="Site keywords here">
+	<meta name="description" content="">
+	<meta name='copyright' content=''>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Title -->
+	<title>@ViewData["Title"] | SAHTAK</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="~/Website Tempalte/img/logo.jpeg">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/bootstrap.min.css">
+	<!-- Nice Select CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/nice-select.css">
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/font-awesome.min.css">
+	<!-- icofont CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/icofont.css">
+	<!-- Slicknav -->
+	<link rel="stylesheet" href="~/Website Template/css/slicknav.min.css">
+	<!-- Owl Carousel CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/owl-carousel.css">
+	<!-- Datepicker CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/datepicker.css">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/animate.min.css">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/magnific-popup.css">
+
+	<!-- Medipro CSS -->
+	<link rel="stylesheet" href="~/Website Template/css/normalize.css">
+	<link rel="stylesheet" href="~/Website Template/style.css">
+	<link rel="stylesheet" href="~/Website Template/css/responsive.css">
+
+</head>
+<body>
+
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="loader">
+			<div class="loader-outter"></div>
+			<div class="loader-inner"></div>
+
+			<div class="indicator">
+				<svg width="16px" height="12px">
+					<polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+					<polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+				</svg>
+			</div>
+		</div>
+	</div>
+	<!-- End Preloader -->
+	@if (ViewData["UserID"] == null)
+	{
+	<!-- Get Pro Button -->
+	<ul class="pro-features">
+		<a class="get-pro">Account</a>
+		<li class="big-title">Have Account Or Not Why Are You Waiting For ?</li>
+		<li>Have Account ?</li>
+		<li class="title">Sign In Your Account.</li>
+		<li>Don't Have Account ?</li>
+		<li class="title">Create One.</li>
+		<div class="button">
+			<a href="/Account/Register" target="_blank" class="btn">Register</a>
+			<a href="/Account/SignIn" target="_blank" class="btn">Sign In</a>
+		</div>
+		</ul>
+	}
+	else
+	{
+		<!-- Get Pro Button -->
+		<ul class="pro-features">
+			<a class="get-pro">@ViewData["FirstName"]</a>
+			<li class="big-title">Logout From Account ?</li>
+			<div class="button">
+				<a href="/Account/Logout" target="_blank" class="btn">Logout</a>
+			</div>
+			<li class="big-title">My Account</li>
+			<div class="button">
+				<a asp-controller="SignedInAccount" asp-action="MyAccount" asp-route-id="@ViewData["UserID"]" target="_blank" class="btn">@(ViewData["FirstName"] + " " + ViewData["LastName"])</a>
+			</div>
+		</ul>
+	}
+
+	
+
+	<!-- Header Area -->
+	<header class="header">
+		<!-- Topbar -->
+		<div class="topbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-5 col-12">
+						<!-- Contact -->
+						<ul class="top-link">
+							
+							@if (ViewData["UserID"] == null)
+							{
+								<li><a href="/Account/Register">Register</a></li>
+								<li><a href="/Account/SignIn">Sign In</a></li>
+							}
+
+						</ul>
+						<!-- End Contact -->
+					</div>
+					<div class="col-lg-6 col-md-7 col-12">
+						<!-- Top Contact -->
+						<ul class="top-contact">
+							@if (ViewData["UserID"] != null)
+							{
+								<li><i class="fa fa-user"></i><a asp-controller="SignedInAccount" asp-action="MyAccount" asp-route-id="@ViewData["UserID"]">@(ViewData["FirstName"] + " " + ViewData["LastName"])</a></li>
+							
+							}
+							<li><i class="fa fa-phone"></i><a href="tel:06123456789">06 1234 56789</a></li>
+							<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">SahtakHealthInsurance@Info.com</a></li>
+						</ul>
+						<!-- End Top Contact -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Topbar -->
+		<!-- Header Inner -->
+		<div class="header-inner">
+			<div class="container">
+				<div class="inner">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-12">
+							<!-- Start Logo -->
+							<div class="logo">
+								<a asp-controller="Home"asp-action="Index"><img src="~/Website Template/img/logo.jpeg" alt="Sahtak Logo" style="height:70px;width:80px"></a>
+							</div>
+							<!-- End Logo -->
+							<!-- Mobile Nav -->
+							<div class="mobile-nav"></div>
+							<!-- End Mobile Nav -->
+						</div>
+						<div class="col-lg-7 col-md-9 col-12">
+							<!-- Main Menu -->
+							<div class="main-menu">
+								<nav class="navigation">
+									<ul class="nav menu">
+										<li><a asp-controller="Home" asp-action="Index">Home </a></li>
+										<li><a asp-controller="Home" asp-action="About">About us </a></li>
+										<li><a asp-controller="Home" asp-action="Testimonial">Testimonial </a></li>
+										<li><a asp-controller="Home"asp-action="ContactUs">Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+							<!--/ End Main Menu -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Header Inner -->
+	</header>
+	<!-- End Header Area -->
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+	<!-- Footer Area -->
+	<footer id="footer" class="footer ">
+		<!-- Footer Top -->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer">
+							<h2>About Us</h2>
+							<p>Our mission is to empower individuals and families in their pursuit of a healthier life, offering comprehensive healthcare solutions, state-of-the-art facilities, and a patient-centered approach to wellness.</p>
+							<!-- Social -->
+							<ul class="social">
+								<li><a href="#"><i class="icofont-facebook"></i></a></li>
+								<li><a href="#"><i class="icofont-google-plus"></i></a></li>
+								<li><a href="#"><i class="icofont-twitter"></i></a></li>
+								<li><a href="#"><i class="icofont-vimeo"></i></a></li>
+								<li><a href="#"><i class="icofont-pinterest"></i></a></li>
+							</ul>
+							<!-- End Social -->
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer f-link">
+							<h2>Quick Links</h2>
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<ul>
+										<li><a asp-controller="Home" asp-action="Index"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+										<li><a asp-controller="Home" asp-action="About"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+									</ul>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<ul>
+										<li><a asp-controller="Home" asp-action="Testimonial"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonial</a></li>
+										<li><a asp-controller="Home" asp-action="ContactUs"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<div class="single-footer">
+							<h2>Open Hours</h2>
+							<p>Our team at Sahtak Health Insurance is at your service during our open hours,
+								ready to assist you with any inquiries and prioritize your well-being.</p>
+							<ul class="time-sidual">
+								<li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
+								<li class="day">Saturday <span>9.00-18.30</span></li>
+								<li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Footer Top -->
+		<!-- Copyright -->
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="copyright-content">
+							<p>© Copyright 2023  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">Sahtak Insurance</a> </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Copyright -->
+	</footer>
+	<!--/ End Footer Area -->
+	<!-- jquery Min JS -->
+	<script src="~/Website Template/js/jquery.min.js"></script>
+	<!-- jquery Migrate JS -->
+	<script src="~/Website Template/js/jquery-migrate-3.0.0.js"></script>
+	<!-- jquery Ui JS -->
+	<script src="~/Website Template/js/jquery-ui.min.js"></script>
+	<!-- Easing JS -->
+	<script src="~/Website Template/js/easing.js"></script>
+	<!-- Color JS -->
+	<script src="~/Website Template/js/colors.js"></script>
+	<!-- Popper JS -->
+	<script src="~/Website Template/js/popper.min.js"></script>
+	<!-- Bootstrap Datepicker JS -->
+	<script src="~/Website Template/js/bootstrap-datepicker.js"></script>
+	<!-- Jquery Nav JS -->
+	<script src="~/Website Template/js/jquery.nav.js"></script>
+	<!-- Slicknav JS -->
+	<script src="~/Website Template/js/slicknav.min.js"></script>
+	<!-- ScrollUp JS -->
+	<script src="~/Website Template/js/jquery.scrollUp.min.js"></script>
+	<!-- Niceselect JS -->
+	<script src="~/Website Template/js/niceselect.js"></script>
+	<!-- Tilt Jquery JS -->
+	<script src="~/Website Template/js/tilt.jquery.min.js"></script>
+	<!-- Owl Carousel JS -->
+	<script src="~/Website Template/js/owl-carousel.js"></script>
+	<!-- counterup JS -->
+	<script src="~/Website Template/js/jquery.counterup.min.js"></script>
+	<!-- Steller JS -->
+	<script src="~/Website Template/js/steller.js"></script>
+	<!-- Wow JS -->
+	<script src="~/Website Template/js/wow.min.js"></script>
+	<!-- Magnific Popup JS -->
+	<script src="~/Website Template/js/jquery.magnific-popup.min.js"></script>
+	<!-- Counter Up CDN JS -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="~/Website Template/js/bootstrap.min.js"></script>
+	<!-- Main JS -->
+	<script src="~/Website Template/js/main.js"></script>
+</body>
+</html>

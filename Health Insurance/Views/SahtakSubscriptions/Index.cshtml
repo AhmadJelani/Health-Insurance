@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Health_Insurance.Models.SahtakSubscription>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!-- Pricing Table -->
+<section id="MoveHere" class="pricing-table section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<h2>We Provide You The Best Subscriptions In Resonable Price</h2>
+					<img src="~/Website Template/img/section-img.png" alt="#">
+					<p>
+						We understand the importance of value and affordability. We take pride
+						in offering top-tier subscription plans that not only deliver the best
+						services but also fit comfortably within your budget. Our commitment to
+						providing reasonable prices ensures that you can access premium
+						subscriptions without breaking the bank. Your satisfaction is our
+						ultimate goal, and we're dedicated to bringing you the best value for your
+						investment. Discover the Sahtake difference today and enjoy quality
+						subscriptions without compromise.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			@foreach (var item in Model)
+			{
+				<!-- Single Table -->
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="single-table">
+						<!-- Table Head -->
+						<div class="table-head">
+							<div class="icon">
+								<i class="icofont-heart-beat"></i>
+							</div>
+							<h4 class="title">@item.Name</h4>
+							<div class="price">
+								<p class="amount">JD @item.Price<span>/ Per @item.Period Month</span></p>
+							</div>
+						</div>
+						<!-- Table List -->
+						<ul class="table-list">
+							<li>@item.Description</li>
+						</ul>
+						<div class="table-bottom">
+							<a class="btn" asp-controller="PaymentAndBank" asp-action="Payment" asp-route-id="@item.Id">Subscribe Now</a>
+						</div>
+						<!-- Table Bottom -->
+					</div>
+				</div>
+				<!-- End Single Table-->
+			}
+		</div>
+	</div>
+	<a class="container btn" style="width:200px;display:flex;justify-content:center;color:white" asp-controller="Home" asp-action="Index">Back To Home</a>
+</section>
+<!--/ End Pricing Table -->

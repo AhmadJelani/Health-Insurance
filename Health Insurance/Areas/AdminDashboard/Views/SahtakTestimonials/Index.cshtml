@@ -1,0 +1,85 @@
+﻿@model IEnumerable<Health_Insurance.Models.SahtakTestimonial>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css" rel="stylesheet" />
+<br />
+<br />
+<h1>Testimonials</h1>
+<div class="container-fluid pt-4 px-4">
+<div class="bg-light text-center rounded p-4">
+<div class="table-responsive">
+<table id="Example1" class="table text-start align-middle table-bordered table-hover mb-0">
+    <thead>
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th scope="col">
+                Submit Date
+            </th>
+            <th scope="col">
+                User First Name
+            </th>
+            <th scope="col">
+                User Last Name
+            </th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubmitDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.LastName)
+            </td>
+            <td>
+                <a class="btn btn-outline-primary"asp-action="Approve" asp-route-id="@item.Id">Approve</a> |
+                <a class="btn btn-outline-primary"asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a class="btn btn-outline-primary" asp-action="Reject" asp-route-id="@item.Id">Reject</a>|
+                <a class="btn btn-outline-primary" asp-action="Delete" asp-route-id="@item.Id">Delete</a>|
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js" defer></script>
+<script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.html5.min.js" defer></script>
+<script>
+    $(document).ready(function () {
+        $("#Example1").DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ]
+        });
+    });
+</script>

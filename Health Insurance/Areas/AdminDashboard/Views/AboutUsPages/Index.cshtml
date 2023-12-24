@@ -1,0 +1,181 @@
+﻿@model IEnumerable<Health_Insurance.Models.AboutUsPage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<br />
+<h1>About Us Page</h1>
+<div class="container-fluid pt-4 px-4">
+<div class="bg-light text-center rounded p-4">
+<div class="table-responsive">
+<table class="table text-start align-middle table-bordered table-hover mb-0">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SixPointParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointOne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointTwo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointThree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointFour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointFive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointSix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThirdTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThirdParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointOneE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointOneEText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointTwoE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointTwoEText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointThreeE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointThreeEText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointFourE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointFiveEText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointSixE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointSixEText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointFourEText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointFiveE)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SixPointParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointOne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointTwo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointThree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointFour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointFive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointSix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThirdTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThirdParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointOneE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointOneEText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointTwoE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointTwoEText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointThreeE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointThreeEText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointFourE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointFiveEText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointSixE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointSixEText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointFourEText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointFiveE)
+            </td>
+            <td>
+                <a class="btn btn-outline-info"asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a class="btn btn-outline-info"asp-action="Details" asp-route-id="@item.Id">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</div>
+</div>

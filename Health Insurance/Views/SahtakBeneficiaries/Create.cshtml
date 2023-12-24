@@ -1,0 +1,90 @@
+﻿@model Tuple<SahtakBeneficiary, IEnumerable<SahtakSubscription>>
+
+@{
+    ViewData["Title"] = "Create";
+}
+<br />
+<br />
+<!-- Start Appointment -->
+<section class="appointment">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<h2>We Are Always Ready to Help You. Add beneficiary to health insurance</h2>
+					<img src="~/Website Template/img/section-img.png" alt="#">
+					<p>We Are Always Ready to Help You. Adding a beneficiary to your health insurance plan ensures comprehensive coverage and peace of mind.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-12">
+				<form class="form" asp-action="Create"enctype="multipart/form-data">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-12">
+							<div class="form-group">
+								<input asp-for="Item1.FirstName" name="fname" type="text" placeholder="First Name"required>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-12">
+							<div class="form-group">
+								<input asp-for="Item1.LastName" name="lname" type="text" placeholder="Last Name"required>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-12">
+							<div class="form-group">
+								<input asp-for="Item1.PDFFile"name="fileproof" type="file" placeholder="Proof Of Relationship(pdf)"required>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-6 col-12">
+							<div class="form-group">
+								<div class="nice-select form-control wide" tabindex="0">
+									<span class="current">Relationship</span>
+									<ul class="list">
+										<li name="relationship" class="option selected ">Mother</li>
+										<li name="relationship" class="option">Father</li>
+										<li name="relationship" class="option">Wife</li>
+										<li name="relationship" class="option">Husband</li>
+										<li name="relationship" class="option">Son</li>
+										<li name="relationship" class="option">Daughter</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-12">
+							<div class="form-group">
+								<div class="nice-select form-control wide" tabindex="0">
+									<span class="current">Subscriptions</span>
+									<ul class="list">
+										@foreach (var item in Model.Item2)
+										{
+											<li name="subscription" data-value="@item.Id" value="@item.Id" class="option selected">
+												@item.Name
+											</li>
+										}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-5 col-md-4 col-12">
+							<div class="form-group">
+								<div class="button">
+									<button type="submit" class="btn">Add</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-lg-6 col-md-12 ">
+				<div class="appointment-image">
+					<img src="~/Images/d1.png" alt="#">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Appointment -->

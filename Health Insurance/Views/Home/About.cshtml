@@ -1,0 +1,136 @@
+﻿@model Health_Insurance.Models.AboutUsPage
+@{
+    ViewData["Title"] = "About";
+}
+
+<!-- Start Why choose -->
+<section class="why-choose section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+                    <h2>@Html.DisplayFor(model => model.FirstTitle)</h2>
+					<img src="~/Website Template/img/section-img.png" alt="#">
+                    <p>@Html.DisplayFor(model => model.FirstParagraph)</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-12">
+				<!-- Start Choose Left -->
+				<div class="choose-left">
+                    <h3>@Html.DisplayFor(model => model.SecondTitle)</h3>
+                    <p>@Html.DisplayFor(model => model.SecondParagraph) </p>
+                    <p>@Html.DisplayFor(model => model.SixPointParagraph) </p>
+					<div class="row">
+						<div class="col-lg-6">
+							<ul class="list">
+                                <li><i class="fa fa-caret-right"></i>@Html.DisplayFor(model => model.PointOne) </li>
+                                <li><i class="fa fa-caret-right"></i>@Html.DisplayFor(model => model.PointTwo)</li>
+                                <li><i class="fa fa-caret-right"></i>@Html.DisplayFor(model => model.PointThree)</li>
+							</ul>
+						</div>
+						<div class="col-lg-6">
+							<ul class="list">
+								<li><i class="fa fa-caret-right"></i>@Html.DisplayFor(model => model.PointFour) </li>
+								<li><i class="fa fa-caret-right"></i>@Html.DisplayFor(model => model.PointFive)</li>
+								<li><i class="fa fa-caret-right"></i>@Html.DisplayFor(model => model.PointSix)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- End Choose Left -->
+			</div>
+			<div class="col-lg-6 col-12">
+				<!-- Start Choose Rights -->
+				<div class="choose-right">
+					<div class="video-image">
+						<!-- Video Animation -->
+						<div class="promo-video">
+							<div class="waves-block">
+								<div class="waves wave-1"></div>
+								<div class="waves wave-2"></div>
+								<div class="waves wave-3"></div>
+							</div>
+						</div>
+						<!--/ End Video Animation -->
+						<a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
+					</div>
+				</div>
+				<!-- End Choose Rights -->
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Why choose -->
+<!-- Start service -->
+<section class="services section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<h2>@Html.DisplayFor(model => model.ThirdTitle)</h2>
+					<img src="~/Website Template/img/section-img.png" alt="#">
+					<p>@Html.DisplayFor(model => model.ThirdParagraph)</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-12">
+				<!-- Start Single Service -->
+				<div class="single-service">
+					<i class="icofont icofont-prescription"></i>
+					<h4><a href="">@Html.DisplayFor(model => model.PointOneE)</a></h4>
+					<p>@Html.DisplayFor(model => model.PointOneEText) </p>
+				</div>
+				<!-- End Single Service -->
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<!-- Start Single Service -->
+				<div class="single-service">
+					<i class="icofont icofont-tooth"></i>
+					<h4><a href="">@Html.DisplayFor(model => model.PointTwoE)</a></h4>
+					<p>@Html.DisplayFor(model => model.PointTwoEText) </p>
+				</div>
+				<!-- End Single Service -->
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<!-- Start Single Service -->
+				<div class="single-service">
+					<i class="icofont icofont-heart-alt"></i>
+					<h4><a href="">@Html.DisplayFor(model => model.PointThreeE)</a></h4>
+					<p>@Html.DisplayFor(model => model.PointThreeEText) </p>
+				</div>
+				<!-- End Single Service -->
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<!-- Start Single Service -->
+				<div class="single-service">
+					<i class="icofont icofont-listening"></i>
+					<h4><a href="">@Html.DisplayFor(model => model.PointFourE)</a></h4>
+					<p>@Html.DisplayFor(model => model.PointFourEText) </p>
+				</div>
+				<!-- End Single Service -->
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<!-- Start Single Service -->
+				<div class="single-service">
+					<i class="icofont icofont-eye-alt"></i>
+					<h4><a href="">@Html.DisplayFor(model => model.PointFiveE)</a></h4>
+					<p>@Html.DisplayFor(model => model.PointFiveEText) </p>
+				</div>
+				<!-- End Single Service -->
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<!-- Start Single Service -->
+				<div class="single-service">
+					<i class="icofont icofont-blood"></i>
+					<h4><a href="">@Html.DisplayFor(model => model.PointSixE)</a></h4>
+					<p>@Html.DisplayFor(model => model.PointSixEText) </p>
+				</div>
+				<!-- End Single Service -->
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End service -->
